@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Basic</title>
+    <!-- Google  CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-size: 18px;
+        font-family: "Times New Roman", Times, serif;
+        background: #ece8e8;
+        line-height: 1.5em;
+        padding: 25px;
+        margin: auto;
+      }
+      header {
+        background: #333;
+        color: #ece8e8;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 5px rgb(4, 118, 170) solid;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Things You should know about JQuery</h1>
+    </header>
+    <div id="container">
+      <h1 id="heading1">What is JQuery</h1>
+      <p id="para1">
+        jQuery is a fast, small, and feature-rich
+        <span>JavaScript library</span>. It makes things like HTML document
+        traversal and manipulation, event handling, animation, and Ajax much
+        simpler with an easy-to-use API that works across a multitude of
+        browsers. If you're new to jQuery.
+        <a href="https://api.jquery.com/">Documentation...</a>
+      </p>
+      <h1 class="heading2">How to use it?</h1>
+      <p class="para2">npm install jquery</p>
+      <ul id="list">
+          <li>React</li>
+          <li>Angular</li>
+          <li>Node.JS</li>
+          <li>JavaScript</li>
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JQuery</li>
+      </ul>
+      <hr/>
+      <!-- /****How to deal with input ***/ -->
+     <span>Name:<input type="text" ></span> 
+    <input type="Button" value="btn-A">
+    <input type="submit" value="btn-B" >
+     <!-- using links -->
+   <br/>
+     <a href="https://github.com/amelegech">My GitHub</a> <br/>
+     <a href="https://www.linkedin.com/in/amelework-g-c/">My LinkedIn</a>
+    
+    </div>
+    <!-- For our javaScript logic -->
+    <script>
+      // Using the selectors Jquery using mony sign or"$" to select specific element, id
+      /** To hide the specific element**/
+
+      // $("h1").hide()
+      //$("h1#heading1").hide()
+      //$("h1.heading2").hide()
+
+      /***manepulating unorderd list ul/li ***/
+      $("p span").css("color", "violet");
+      $("ul#list li:first").css("color","blue");
+      $("ul#list li:last").css("color","brown");
+      $("ul#list li:even").css("background-color","skyblue");
+      $("ul#list li:odd").css("background-color","lightgray");
+      //$("ul#list li:nth-child(3n)").css("list-style","none");
+      $("ul#list li:nth-child(3n)").css("color", 'orange');
+
+    /****How to deal with input ***/
+      //$(":button").hide();
+      //$(":submit").hide();
+      $(":button").css( "padding", "10px");
+      $(":button").css("background-color","skyblue");
+      $(":button").css( "color", "white");
+     
+      
+      $(":submit").css( "padding", "10px");
+      $(":submit").css("background-color","skyblue");
+      $(":submit").css( "color", "white");
+
+      $(":text").css( "padding", "10px");
+      $(":text").css("background-color","black");
+      $(":text").css( "color", "white");
+      $("span").css("color", "indigo");
+      /**Link href style**/
+      $("[href]").css("color","orange");
+    //**********To hide evry thing in the page***********/
+   // $('*').hide()
+
+    </script>
+  </body>
+</html>
