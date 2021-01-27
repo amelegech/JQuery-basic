@@ -58,9 +58,11 @@
       <hr/>
       <!-- /****How to deal with input ***/ -->
      <span>Name:<input type="text" ></span> 
-    <input type="Button" value="btn-A">
-    <input type="submit" value="btn-B" >
-     <!-- using links -->
+    <!-- <input type="Button" value="btn-A">
+    <input type="submit" value="btn-B" > -->
+    <button id="btnA">Button A</button>
+    <button id="btnB">Button B</button>
+    <button id="btnC">Button C</button>
    <br/>
      <a href="https://github.com/amelegech">My GitHub</a> <br/>
      <a href="https://www.linkedin.com/in/amelework-g-c/">My LinkedIn</a>
@@ -69,6 +71,8 @@
     <!-- For our javaScript logic -->
     <script>
       // Using the selectors Jquery using mony sign or"$" to select specific element, id
+     $(document).ready(function(){
+
       /** To hide the specific element**/
 
       // $("h1").hide()
@@ -87,14 +91,14 @@
     /****How to deal with input ***/
       //$(":button").hide();
       //$(":submit").hide();
-      $(":button").css( "padding", "10px");
-      $(":button").css("background-color","skyblue");
-      $(":button").css( "color", "white");
+      // $(":button").css( "padding", "10px");
+      // $(":button").css("background-color","skyblue");
+      // $(":button").css( "color", "white");
      
       
-      $(":submit").css( "padding", "10px");
-      $(":submit").css("background-color","skyblue");
-      $(":submit").css( "color", "white");
+      // $(":submit").css( "padding", "10px");
+      // $(":submit").css("background-color","skyblue");
+      // $(":submit").css( "color", "white");
 
       $(":text").css( "padding", "10px");
       $(":text").css("background-color","black");
@@ -104,7 +108,46 @@
       $("[href]").css("color","orange");
     //**********To hide evry thing in the page***********/
    // $('*').hide()
+   /********* Event Handler*************/
+   //Button A CSS
+      $("#btnA").css( "padding", "10px");
+      $("#btnA").css("background-color","skyblue");
+      $("#btnA").css( "color", "white");
+      //button B CSS
+      $("#btnB").css( "padding", "10px");
+      $("#btnB").css("background-color","skyblue");
+      $("#btnB").css( "color", "white");
+      //Button C  CSS
+      $("#btnC").css( "padding", "10px");
+      $("#btnC").css("background-color","skyblue");
+      $("#btnC").css( "color", "white");
+      //Event Handler
+     /* $("#btnA").click(function(){
+        alert("Button AAA has been clicked")
+      })
+      $("#btnB").click(function(){
+        alert("Button BBB has been clicked")
+      }) 
+       $("#btnA").on('click', function(){
+         alert("Button A with on() method")
+       })
+       $("#btnB").on('click', function(){
+         alert("Button A with on() method")
+       }) */
+    /***** HIDE *** SHOW ***** TOGGLE *******/
+    $("#btnA").on("click", function(){
+      $("#para1").hide()
+     
+    })
+    $("#btnB").on("click", function(){
+      $("#para1").show()
+    })
+    $("#btnC").on('click', function(){
+      $("#list").toggle()
+    })
 
+     })
+      
     </script>
   </body>
 </html>
